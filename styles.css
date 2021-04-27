@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.image-effect {
+	margin: 2rem 0;
+	padding: 0;
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+}
+
+img {
+	width: 50%;
+	max-width: 100%;
+}
+
+.effect-bw {
+	filter: grayscale(0%);
+	transition: filter 0.5s ease-in-out;
+}
+
+.effect-bw:hover {
+	filter: grayscale(100%);
+}
+
+.effect-zoom{
+	transform-origin: center;
+	transition: transform 0.5s ease-in-out;
+}
+
+.effect-zoom:hover{
+	transform: scale(1.2);
+}
+
+.effect-tilt{
+	transform-origin: center;
+	transition: transform 0.5s ease-in-out;
+}
+
+.effect-tilt:hover{
+	transform: rotate(-8deg) scale(1.2);
+}
+
+.btn {
+	background: none;
+	border: 1px solid #7864f4;
+	color: #7864f4;
+	padding: 10px;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	animation: all 1s;
+	overflow: hidden;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+.btn:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(#7864f4, #3072d3);
+	width: 100%;
+	transition: all 0.3s;
+	z-index: -1;
+}
+
+.btn:hover {
+	color: #fff;
+}
+
+/* BUTTON 1 */
+.btn_1:before {
+	border-radius: 0 0 50% 50%;
+	height: 0;
+}
+.btn_1:hover:before {
+	height: 200%;
+}
+
+ /* BUTTON 2  */
+.btn_2:before {
+	Transform: rotate(-90deg);
+	transform-origin: bottom left;
+	height: 100%;
+}
+.btn_2:hover:before {
+	transform: rotate(0);
+}
+
+ /* BUTTON 3 */
+.btn_3:before {
+	height: 0;
+}
+.btn_3:hover:before {
+	height: 100%;
+}
